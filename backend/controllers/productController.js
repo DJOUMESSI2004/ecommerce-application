@@ -10,6 +10,7 @@ const getAllProducts = async (req, res) => {
     }
 };
 
+
 // Ajouter un nouveau produit
 const createProduct = async (req, res) => {
     const product = new Product(req.body);
@@ -20,6 +21,7 @@ const createProduct = async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 };
+
 
 // Récupérer un produit par ID
 const getProductById = async (req, res) => {
