@@ -1,11 +1,31 @@
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+// app/layout.tsx (or _app.tsx)
+import './globals.css'; // Import global styles
+
+// app/layout.tsx
+import Navbar from "./components/Navbar"
+import Footer from './components/Footer';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My E-commerce Shop</title>
+      </head>
+      <body>
+        
+        {/* Navbar Component */}
+        <Navbar />
+
+        {/* Main Content of the Page */}
+        <main>{children}</main>
+
+      <footer>
+        <Footer/>
+      </footer>
+      </body>
+
     </html>
-  )
+  );
 }

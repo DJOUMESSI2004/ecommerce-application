@@ -1,0 +1,57 @@
+/* css style for HomeDisplay component */
+
+.homeDisplay{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.top-h-display{
+    padding: 0 50px;
+}
+.top-h-display, .buttom-h-display{
+    width: 100%;
+    position: relative;
+}
+
+.top-h-display h2{
+    float: right;
+    width: 70%;
+    font-size: 6rem;
+    text-transform: uppercase;
+    line-height: 5.5rem;
+    text-align: right;
+}
+
+
+.buttom-h-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.buttom-h-display > .web-icon {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px; 
+    box-sizing: border-box; 
+    /* margin: 5px 70px; */
+    /* background-color: red; */
+}
+
+.content-wrap {
+    margin: 0 30px; 
+}
+
+.content-wrap img{
+    margin-bottom: 20px;
+}
+
+.web-icon span{
+    font-size: 1.7rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+}
+

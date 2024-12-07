@@ -1,0 +1,114 @@
+/* Footer container */
+.footer {
+    background-color: rgb(255, 255, 255); /* Dark background for the footer */
+    color: rgb(0, 0, 0);              /* White text color */
+    padding: 50px 50px;        /* Padding for spacing around the content */
+    font-family: Arial, sans-serif; /* Font family */
+  }
+  
+  .footer-top,
+  .footer-bottom {
+    text-align: left; /* Center-align the heading text */
+    margin-bottom: 20px; /* Spacing between sections */
+  }
+
+  .footer-top h2{
+    width: 70%;
+    line-height: 5rem;
+  }
+  
+  .footer-top h2,
+  .footer-bottom h2 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 100;
+}
+  
+  .footer-middle {
+    margin-top: 4rem;
+  }
+  .social-icons{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .social-icons svg {
+    font-size: 17px;
+  }
+  .social-icons svg:last-child{
+    margin-left: 15px;
+  }
+  .footer-middle ul {
+    list-style: none;          
+    display: flex;             
+    justify-content: space-between; 
+    padding: 0;               
+    margin: 0;                  
+    width: 100%;               
+  }
+  
+  .footer-middle li {
+    flex: 1;                   
+    text-align: center;      
+    padding: 10px;            
+    box-sizing: border-box;  
+  
+  }
+
+
+  
+  .footer-middle li:first-child {
+    text-align: left;           /* Align the first child to the left */
+  }
+  
+  .footer-middle li:last-child {
+    text-align: right;   
+  }
+
+  
+  
+  
+  .footer-middle label {
+    font-weight: bold;  /* Make labels bold */
+    margin-right: 10px; /* Space between label and value */
+    text-transform: uppercase;
+}
+  
+  .footer-middle span {
+    font-weight: normal; /* Normal weight for span */
+  }
+  
+  .footer-middle span:first-child {
+    margin-right: 20px; /* Add spacing between social media links */
+  }
+  
+  .footer-middle li span {
+    text-transform: capitalize; /* Capitalize the first letter of the social media links */
+  }
+  
+  
+  .footer-bottom {
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    /* Desktop version - Adjust layout for larger screens */
+    .footer-middle {
+      display: flex;
+      justify-content: space-evenly; /* Distribute the contact items evenly */
+      text-align: left; /* Align items to the left */
+    }
+  
+    .footer-middle li {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align the items to the left */
+    }
+  
+    .footer-middle span {
+      
+    }
+  }
+  

@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +19,122 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* Articles Container */
+.articles-container {
+  width: 100%;
+  margin: 30px auto;
+  padding: 20px;
+  border-bottom: 1px solid white;
+}
+
+.articles-container h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  margin-bottom: 20px;
+  padding-left: 80px;
+}
+
+/* Flexbox for Articles */
+.articles-flex {
+  display: flex;
+  flex-wrap: wrap;           
+  justify-content: center;    
+  gap: 70px;
+  /* margin: 0; */
+}
+
+.articles-container p{
+  margin:40px 80px;
+
+}
+
+
+
+
+
+
+/* Boost Section Container */
+.boost-section {
+  display: flex;
+  flex-direction: row;               /* Align left and right sections horizontally */
+  justify-content: space-between;     /* Space between the left and right sections */
+  align-items: flex-start;            /* Align items at the start of the container */
+  padding: 50px;                      /* Add padding around the section */
+  margin: 20px 0;  
+}
+
+.left-section {
+  flex: 1;
+  display: flex;                        /* Enable flexbox */
+  height: 100%;                          /* Ensure the left section takes the full height of the parent */
+}
+
+.left-section h1 {
+  font-size: 7rem;                      /* Large font size */
+  font-weight: 100;                   /* Bold font weight */
+  text-align: center; 
+  padding: 140px 10px;  
+  text-transform: uppercase;             /* Ensure text is centered horizontally within h1 */
+}
+
+
+/* Right Section Styling */
+.right-section {
+  flex: 1;                           /* Right section takes up more space */
+  display: flex;
+  flex-direction: column;             /* Stack the booster quotes vertically */
+  gap: 20px;                          /* Space between each "boosters" div */
+  align-items: flex-start;            /* Align items to the left */
+  justify-content: center;   
+}
+
+/* Individual Booster Styling */
+.bosters {   
+  padding: 20px;                       /* Add padding inside the booster */
+  border-radius: 8px;                  /* Rounded corners */
+  width: 100%;   
+  border-bottom: 1px solid white;                        /* Full width */
+}
+
+.bosters p {
+  font-size: 1rem;                     /* Set font size for the quote */         /* Dark gray for the text */
+  margin-bottom: 10px; 
+                /* Space between the quote and the magazine name */
+}
+
+.bosters h2 {
+  font-size: 1.6rem;                   /* Slightly larger font size for the magazine name */
+  font-weight: 100;
+  text-transform: uppercase;
+                        /* Dark color for the magazine name */
+}
+
+/* Mobile Responsiveness: Stack the sections vertically on smaller screens */
+@media (max-width: 768px) {
+  .boost-section {
+      flex-direction: column;         /* Stack sections vertically on small screens */
+      align-items: center;            /* Center content */
+  }
+
+  .left-section {
+      padding-right: 0;               /* Remove right padding */
+      text-align: center;             /* Center the text */
+      margin-bottom: 20px;            /* Add space between sections */
+  }
+
+  .right-section {
+      flex: unset;                    /* Remove flex grow for right section */
+      align-items: center;            /* Center items in the right section */
+  }
+
+  .bosters {
+      width: 80%;                     /* Limit width of boosters on small screens */
+      margin: 10px 0;                 /* Add margin between boosters */
+  }
 }

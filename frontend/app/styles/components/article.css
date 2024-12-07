@@ -1,0 +1,70 @@
+/* css for article  */
+
+.article{
+    width: 300px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+/* Hover effect for articles */
+.article:hover {
+    transform: scale(1.05); 
+  }
+  
+
+.article-content {
+    position: relative;
+    display: flex;       
+    justify-content: center; 
+    align-items: center;  
+    flex-direction: column; 
+    height: 100%; 
+    width: 100%;
+}
+
+.article-content > div {
+    display: block;  
+    text-align: center; 
+    margin: 10px 0;
+}
+
+.article-img{
+    width: 100%;
+    height: 230px;
+}
+.article-img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Style for article-info */
+.article-info {
+    position: relative;
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;         
+    width: 100%;      
+    border-bottom: 1px solid white;
+}
+
+
+.article-content > div {
+    flex: 1;                    
+    display: flex;              
+}
+
+.article-content .art-name {
+    text-align: left;          
+}
+
+.article-content .art-price {
+    text-align: right;  
+}
+
+
+
+
+
+
