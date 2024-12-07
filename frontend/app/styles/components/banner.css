@@ -106,7 +106,8 @@
 
 /* Changement de couleur au survol */
 .buttom-flex-align .round-btn button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: #000000;
 }
 
 

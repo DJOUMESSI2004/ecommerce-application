@@ -1,4 +1,5 @@
 import Image from 'next/image'; // Import images from public
+import Link from 'next/link';
 
 import '../styles/components/banner.css';
 
@@ -31,9 +32,11 @@ export default function Banner() {
                 </div>
                 <h1>vibe</h1>
                 <div className="round-btn">
-                    <button>
-                        explore more
-                    </button>
+                    <Link href="/products">
+                        <button>
+                            explore more
+                        </button>
+                    </Link>
                 </div>
 
             </div>
