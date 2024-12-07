@@ -91,24 +91,69 @@
 
 }
 
-/* Style pour le bouton circulaire */
+/* Style for the circular button */
 .buttom-flex-align .round-btn button {
-    flex: 1;
-    padding: 20px 20px;
-    border: 1.5px solid white;
-    border-radius: 50px;
-    color: var(--white_text); 
-    font-size: 1rem;
-    cursor: pointer; /* Change le curseur au survol */
-    transition: background-color 0.3s ease; 
-    width: 90px;
+  flex: 1;
+  padding: 20px 20px;
+  border: 1.5px solid white;
+  border-radius: 50px;
+  color: var(--white_text); 
+  font-size: 1rem;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease; 
+  width: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 15px 3px rgba(255, 255, 255, 0.776);
+  animation: pulse 1.5s ease-in-out infinite; /* Apply the pulse animation */
 }
 
-/* Changement de couleur au survol */
+/* Change color on hover */
 .buttom-flex-align .round-btn button:hover {
-    background-color: white;
-    color: #000000;
+  background-color: white;
+  color: #000000;
+  animation: pulse 0.6s ease-in-out infinite; /* Apply the pulse animation on hover */
 }
+
+/* Pulse animation (increasing and decreasing scale) */
+@keyframes pulse {
+  0% {
+      transform: scale(1); /* Start at normal size */
+  }
+  50% {
+      transform: scale(1.1); /* Enlarge the button */
+  }
+  100% {
+      transform: scale(1); /* Return to original size */
+  }
+}
+
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1); /* Slightly enlarge button */
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Spinning animation */
+@keyframes spin {
+  0% {
+      transform: rotate(0deg); /* Start from 0 degrees */
+  }
+  100% {
+      transform: rotate(360deg); /* Full rotation */
+  }
+}
+
 
 
 /* Media Queries for Responsiveness */
