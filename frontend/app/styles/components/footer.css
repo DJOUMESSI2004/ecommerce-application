@@ -1,15 +1,15 @@
 /* Footer container */
 .footer {
-    background-color: rgb(255, 255, 255); /* Dark background for the footer */
-    color: rgb(0, 0, 0);              /* White text color */
-    padding: 50px 50px;        /* Padding for spacing around the content */
-    font-family: Arial, sans-serif; /* Font family */
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);      
+    padding: 50px 50px;  
+    font-family: Arial, sans-serif; 
   }
   
   .footer-top,
   .footer-bottom {
-    text-align: left; /* Center-align the heading text */
-    margin-bottom: 20px; /* Spacing between sections */
+    text-align: left; 
+    margin-bottom: 20px; 
   }
 
   .footer-top h2{
@@ -59,7 +59,7 @@
 
   
   .footer-middle li:first-child {
-    text-align: left;           /* Align the first child to the left */
+    text-align: left;    
   }
   
   .footer-middle li:last-child {
@@ -70,21 +70,21 @@
   
   
   .footer-middle label {
-    font-weight: bold;  /* Make labels bold */
-    margin-right: 10px; /* Space between label and value */
+    font-weight: bold;  
+    margin-right: 10px; 
     text-transform: uppercase;
 }
   
   .footer-middle span {
-    font-weight: normal; /* Normal weight for span */
+    font-weight: normal; 
   }
   
   .footer-middle span:first-child {
-    margin-right: 20px; /* Add spacing between social media links */
+    margin-right: 20px; 
   }
   
   .footer-middle li span {
-    text-transform: capitalize; /* Capitalize the first letter of the social media links */
+    text-transform: capitalize;
   }
   
   
@@ -94,21 +94,18 @@
   }
   
   @media (min-width: 768px) {
-    /* Desktop version - Adjust layout for larger screens */
+  
     .footer-middle {
       display: flex;
-      justify-content: space-evenly; /* Distribute the contact items evenly */
-      text-align: left; /* Align items to the left */
+      justify-content: space-evenly;
+      text-align: left; 
     }
   
     .footer-middle li {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Align the items to the left */
+      align-items: flex-start; 
     }
   
-    .footer-middle span {
-      
-    }
   }
   

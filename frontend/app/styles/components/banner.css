@@ -100,7 +100,7 @@
     color: var(--white_text); 
     font-size: 1rem;
     cursor: pointer; /* Change le curseur au survol */
-    transition: background-color 0.3s ease; /* Effet au survol */
+    transition: background-color 0.3s ease; 
     width: 90px;
 }
 

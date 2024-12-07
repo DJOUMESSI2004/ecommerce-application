@@ -2,7 +2,7 @@
 
 /* Global styles for the navbar */
 .navbar {
-    background-color: #000000; /* Bleu */
+    background-color: #000000;
     padding: 16px;
     box-sizing: border-box;
     width: 100%;
@@ -24,7 +24,7 @@
   
   .navbar-logo img {
     max-height: 80px;
-    margin-right: 10px; /* Espace entre le logo et le texte */
+    margin-right: 10px; 
   }
   
   .navbar-text {
@@ -46,6 +46,6 @@
   }
   
   .navbar-cart a:hover {
-    color: #d1d5db; /* Gris clair au survol */
+    color: #d1d5db; 
   }
   
