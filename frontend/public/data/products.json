@@ -1,0 +1,33 @@
+[
+    {
+      "imageSrc": "/images/shirt1.png",
+      "name": "City of Shirts",
+      "price": "$20.00"
+    },
+    {
+      "imageSrc": "/images/shirt2.png",
+      "name": "Street Smart Hoodie",
+      "price": "$25.00"
+    },
+    {
+      "imageSrc": "/images/shirt3.png",
+      "name": "Urban Sweat Shirt",
+      "price": "$30.00"
+    },
+    {
+      "imageSrc": "/images/shirt1.png",
+      "name": "City of Shirts",
+      "price": "$20.00"
+    },
+    {
+      "imageSrc": "/images/shirt2.png",
+      "name": "Street Smart Hoodie",
+      "price": "$25.00"
+    },
+    {
+      "imageSrc": "/images/shirt3.png",
+      "name": "Urban Sweat Shirt",
+      "price": "$30.00"
+    }
+  ]
+  

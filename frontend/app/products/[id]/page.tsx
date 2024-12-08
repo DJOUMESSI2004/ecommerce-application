@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useCart } from '@/app/context/CartContext';
 import '../../styles/components/product.css';
 
-
 export default function ProductPage() {
   const [count, setCount] = useState(1);
   const { addToCart } = useCart();

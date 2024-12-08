@@ -1,4 +1,5 @@
 // Importing CSS and Next.js Image
+import Link from 'next/link';
 import '../styles/components/article.css';
 import Image from 'next/image';
 
@@ -8,10 +9,11 @@ interface ArticleProps {
     imageSrc: string;
     name: string;
     price: string;
+    // link: string;
 }
 
 // Reusable Component
-export default function Article({ imageSrc, name, price }: ArticleProps) {
+export default function Article({ imageSrc, name, price}: ArticleProps) {
     return (
         <div className="article">
             <div className="article-content">
