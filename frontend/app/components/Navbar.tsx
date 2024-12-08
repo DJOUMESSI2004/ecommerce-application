@@ -3,7 +3,9 @@
 import { FaShoppingCart } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
+
 import '../styles/components/navbar.css';
+import CartIcon from './CartIcon';
 
 export default function Navbar() {
   return (
@@ -25,9 +27,7 @@ export default function Navbar() {
 
         {/* Panier à droite */}
         <div className="navbar-cart">
-          <Link href="/cart">
-            <FaShoppingCart size={24} />
-          </Link>
+          <CartIcon/>
         </div>
       </div>
     </nav>

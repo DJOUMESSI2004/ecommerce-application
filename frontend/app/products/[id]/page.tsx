@@ -1,8 +1,42 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { useCart } from '@/app/context/CartContext';
 import '../../styles/components/product.css';
 
+
 export default function ProductPage() {
+  const [count, setCount] = useState(1);
+  const { addToCart } = useCart();
+
+  // Example Product Details (replace with dynamic data if needed)
+  const product = {
+    id: "shirt1",  // Unique ID for the product
+    name: "T-shirt en coton pour homme",
+    price: 31.99,  // Example price
+  };
+
+  const increase = () => {
+    setCount((prev) => prev + 1);
+  };
+
+  const decrease = () => {
+    setCount((prev) => (prev > 1 ? prev - 1 : 1));
+  };
+
+  const handleAddToCart = () => {
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: count,  // Pass the quantity selected by the user
+    };
+    
+    addToCart(cartItem); // Pass the complete cart item to the cart context
+    setCount(1);  // Reset count after adding to cart
+  };
+
   return (
     <div className="product-page">
       {/* Left Section - Product Image */}
@@ -14,19 +48,11 @@ export default function ProductPage() {
           height={500}
           priority
         />
-        {/* <div className="eco-label">
-          <Image
-            src="/images/shirt1.png" // Replace with eco-label path
-            alt="Eco Label"
-            width={50}
-            height={50}
-          />
-        </div> */}
       </div>
 
       {/* Right Section - Product Details */}
       <div className="product-details">
-        <h1 className="product-title">T-shirt en coton pour homme</h1>
+        <h1 className="product-title">{product.name}</h1>
         <p className="product-description">
           100 % coton biologique, cueilli à la main, cultivé sans pesticides ni insecticides.
         </p>
@@ -53,7 +79,7 @@ export default function ProductPage() {
         </div>
 
         <div className="product-price">
-          <span>31.99 €</span>
+          <span>{product.price} €</span>
           <small>TVA incluse</small>
         </div>
 
@@ -63,14 +89,15 @@ export default function ProductPage() {
 
         <div className="add-to-cart">
           <div className="quantity-selector">
-            <button>-</button>
-            <span>1 pcs</span>
-            <button>+</button>
+            <button onClick={decrease}>-</button>
+            <span>{count}</span>
+            <button onClick={increase}>+</button>
           </div>
-          <button className="cart-button">Ajouter au panier</button>
+          <button onClick={handleAddToCart} className="cart-button">
+            Ajouter au panier
+          </button>
           <button className="wishlist-button">❤</button>
         </div>
-
       </div>
     </div>
   );

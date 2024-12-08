@@ -1,0 +1,141 @@
+/* Cart Page Container */
+.cartPage {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for the entire page */
+    color: #fff; /* White text for contrast */margin-bottom: 50px;
+}
+
+/* Heading */
+.cartPage h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff; /* White color for the heading */
+}
+
+/* Message when Cart is Empty */
+.cartPage p {
+    font-size: 1.2rem;
+    color: #bbb; /* Lighter grey for empty cart message */
+}
+
+.cartPage a {
+    text-decoration: none;
+    color: #1e90ff; /* Bright blue link color */
+}
+
+/* Cart Items Container */
+.cartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cart Item */
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #333; /* Darker border for better contrast */
+    border-radius: 8px;
+    background-color: #1c1c1c; /* Darker background for each item */
+}
+
+/* Product Image */
+.productImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product Details */
+.productDetails {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+/* Product Name */
+.productDetails h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff; /* White text for product names */
+}
+
+/* Product Price */
+.productDetails p {
+    font-size: 1.2rem;
+    color: #fff; /* White color for product price */
+}
+
+/* Quantity Input */
+.quantityInput {
+    width: 60px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #444; /* Dark border for input */
+    margin-top: 10px;
+    background-color: #333; /* Dark background for input */
+    color: #fff; /* White text in the input */
+}
+
+/* Actions (Remove Button) */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Remove Button */
+.removeButton {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.removeButton:hover {
+    background-color: #ff3333;
+}
+
+/* Cart Summary */
+.cartSummary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c1c1c; /* Dark background for the summary */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Total Price */
+.cartSummary p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* White color for total price */
+}
+
+/* Checkout Button */
+.checkoutButton {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.checkoutButton:hover {
+    background-color: #218838;
+}

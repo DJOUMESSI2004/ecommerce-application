@@ -38,14 +38,32 @@
     font-size: 24px;
   }
   
-  .navbar-cart a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-cart a:hover {
-    color: #d1d5db; 
-  }
+/* Styling for the cart quantity badge */
+.navbar-cart  span {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0); /* Text color */
+  border: 2px solid greenyellow;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Add hover effect to the cart icon */
+.navbar-cart:hover svg {
+  color: greenyellow;
+}
+
+/* Optional: Add transition for smooth hover effect */
+.navbar-cart svg {
+  transition: color 0.8s ease;
+}
+
   

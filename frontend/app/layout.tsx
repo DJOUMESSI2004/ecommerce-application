@@ -1,5 +1,6 @@
 // app/layout.tsx (or _app.tsx)
 import './globals.css'; // Import global styles
+import { CartProvider } from './context/CartContext';
 
 // app/layout.tsx
 import Navbar from "./components/Navbar"
@@ -14,16 +15,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>My E-commerce Shop</title>
       </head>
       <body>
-        
-        {/* Navbar Component */}
-        <Navbar />
+        <CartProvider>
 
-        {/* Main Content of the Page */}
-        <main>{children}</main>
 
-      <footer>
-        <Footer/>
-      </footer>
+          {/* Navbar Component */}
+          <Navbar />
+
+          {/* Main Content of the Page */}
+          <main>{children}</main>
+
+          <footer>
+            <Footer />
+          </footer>
+
+          
+        </CartProvider>
+
       </body>
 
     </html>
