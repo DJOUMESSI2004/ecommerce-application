@@ -1,33 +1,38 @@
 [
-    {
-      "imageSrc": "/images/shirt1.png",
-      "name": "City of Shirts",
-      "price": "$20.00"
-    },
-    {
-      "imageSrc": "/images/shirt2.png",
-      "name": "Street Smart Hoodie",
-      "price": "$25.00"
-    },
-    {
-      "imageSrc": "/images/shirt3.png",
-      "name": "Urban Sweat Shirt",
-      "price": "$30.00"
-    },
-    {
-      "imageSrc": "/images/shirt1.png",
-      "name": "City of Shirts",
-      "price": "$20.00"
-    },
-    {
-      "imageSrc": "/images/shirt2.png",
-      "name": "Street Smart Hoodie",
-      "price": "$25.00"
-    },
-    {
-      "imageSrc": "/images/shirt3.png",
-      "name": "Urban Sweat Shirt",
-      "price": "$30.00"
-    }
-  ]
-  
+  {
+    "id": "1",
+    "imageSrc": "/images/shirt1.png",
+    "name": "City of Shirts",
+    "price": 20.00
+  },
+  {
+    "id": "2",
+    "imageSrc": "/images/shirt2.png",
+    "name": "Street Smart Hoodie",
+    "price": 25.00
+  },
+  {
+    "id": "3",
+    "imageSrc": "/images/shirt3.png",
+    "name": "Urban Sweat Shirt",
+    "price": 30.00
+  },
+  {
+    "id": "4",
+    "imageSrc": "/images/shirt1.png",
+    "name": "City of Shirts",
+    "price": 20.00
+  },
+  {
+    "id": "5",
+    "imageSrc": "/images/shirt2.png",
+    "name": "Street Smart Hoodie",
+    "price": 25.00
+  },
+  {
+    "id": "6",
+    "imageSrc": "/images/shirt3.png",
+    "name": "Urban Sweat Shirt",
+    "price": 30.00
+  }
+]

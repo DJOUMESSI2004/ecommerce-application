@@ -27,6 +27,8 @@ export default function ProductPage() {
     fetchProducts();
   }, []);
 
+  
+
   return (
     <div className="product-container">
       <h1>Products</h1>
