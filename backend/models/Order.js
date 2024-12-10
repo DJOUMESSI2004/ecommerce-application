@@ -1,19 +1,31 @@
 const mongoose = require('mongoose');
 
-const orderSchema = new mongoose.Schema({
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+const orderSchema = new mongoose.Schema(
+  {
     items: [
-        {
-            productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
-            quantity: { type: Number, required: true },
-            price: { type: Number, required: true },
-        }
+      {
+        name: { type: String, required: true }, // Name of the product
+        image: { type: String }, // Optional: URL of the product image
+        price: { type: Number, required: true }, // Price in cents
+        quantity: { type: Number, required: true }, // Quantity of the item
+      },
     ],
-    totalAmount: { type: Number, required: true },
-    address: { type: String, required: true },
-    status: { type: String, default: 'Pending' }, // e.g., Pending, Shipped, Delivered
-    paymentMethod: { type: String, required: true }, // e.g., Credit Card, PayPal
-    paymentStatus: { type: String, default: 'Not Paid' }, // e.g., Paid, Not Paid
-}, { timestamps: true });
+    shipping: {
+      name: { type: String, required: true }, // Shipping name
+      email: { type: String, required: true }, // Shipping email
+      address: { type: String, required: true }, // Shipping address
+      city: { type: String, required: true }, // City
+      postalCode: { type: String, required: true }, // Postal code
+    },
+    stripeSessionId: { type: String, required: true }, // Stripe session ID
+    paymentStatus: { type: String, default: 'pending' }, // Payment status ('pending', 'paid', 'failed')
+    createdAt: { type: Date, default: Date.now }, // Timestamp for order creation
+  },
+  {
+    timestamps: true, // Adds `createdAt` and `updatedAt` fields automatically
+  }
+);
 
-module.exports = mongoose.model('Order', orderSchema);
+const Order = mongoose.model('Order', orderSchema);
+
+module.exports = Order;
