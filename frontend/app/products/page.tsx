@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';  // Import Link component from Next.js
 import Article from '../components/Article';
 import '../styles/components/product.css';
+import ScrollAnimation from '../components/ScrollAnimation';
+
 
 interface Product {
   id: string;  // Unique identifier for each product
@@ -26,25 +28,29 @@ export default function ProductPage() {
     fetchProducts();
   }, []);
 
-  
+
 
   return (
-    <div className="product-container">
-      <h1>Products</h1>
-      <div className="display-products">
-        {products.map((product, index) => (
-          <Link key={index} href={`/products/${product.id}`}> {/* Link to the dynamic product page */}
-            
+    <ScrollAnimation>
+
+
+      <div className="product-container">
+        <h1>Products</h1>
+        <div className="display-products">
+          {products.map((product, index) => (
+            <Link key={index} href={`/products/${product.id}`}> {/* Link to the dynamic product page */}
+
               <Article
                 imageSrc={product.imageSrc}
                 name={product.name}
                 price={product.price}
-                
+
               />
-            
-          </Link>
-        ))}
+
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </ScrollAnimation>
   );
 }
