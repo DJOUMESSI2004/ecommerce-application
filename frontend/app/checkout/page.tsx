@@ -94,6 +94,10 @@ export default function CheckoutPage() {
             <ul>
               {cartItems.map((item) => (
                 <li key={item.id}>
+                  {/* <Image
+                        src={item.imageSrc}
+                        alt=
+                    /> */}
                   {item.name} - {item.quantity} x €{item.price.toFixed(2)}
                 </li>
               ))}
@@ -161,13 +165,13 @@ export default function CheckoutPage() {
                 />
               </div>
             </form>
+            {/* Payment Button */}
+            {error && <div className="errorMessage">{error}</div>} {/* Show error message */}
+            <button className="checkoutButton" onClick={handleCheckout} disabled={loading}>
+              {loading ? "Processing..." : "Proceed to Payment"}
+            </button>
           </div>
 
-          {/* Payment Button */}
-          {error && <div className="errorMessage">{error}</div>} {/* Show error message */}
-          <button className="checkoutButton" onClick={handleCheckout} disabled={loading}>
-            {loading ? "Processing..." : "Proceed to Payment"}
-          </button>
         </div>
       )}
     </div>

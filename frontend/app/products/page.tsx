@@ -10,7 +10,6 @@ interface Product {
   imageSrc: string;
   name: string;
   price: string;
-  link: string;  // Optionally link to the product page
 }
 
 export default function ProductPage() {

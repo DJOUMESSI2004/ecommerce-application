@@ -156,6 +156,65 @@
 
 
 
+
+
+
+/* Elegant animation for 'Find your vibe' */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0; /* Start invisible */
+    transform: translateY(-50px) scale(0.9); /* Slide down from above with slight shrink */
+    letter-spacing: 2px; /* Start with wide spacing */
+    color: var(--white_text); /* Text starts as white */
+  }
+  50% {
+    opacity: 0.8; /* Halfway faded in */
+    transform: translateY(10px) scale(1.05); /* Bounce effect with slight growth */
+    letter-spacing: 4px; /* Widen spacing briefly */
+    color: #d9d9d9; /* Change to light gray */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0) scale(1); /* Settle in place */
+    letter-spacing: 2px; /* Return to normal spacing */
+    color: var(--white_text); /* Back to white */
+  }
+}
+
+/* Apply animation to 'Find your vibe' */
+.banner h1 {
+  animation: fadeSlide 2.5s ease-in-out; /* Smooth animation */
+   /* Adjust size as needed */
+  font-weight: bold; /* Strong emphasis */
+  text-transform: uppercase; /* Consistent branding style */
+}
+
+/* Fine-tuning for middle section (if needed) */
+.middle-center-align h1 {
+  animation: fadeSlide 2s ease-in-out infinite; /* Infinite effect for middle text */
+}
+
+
+/* Apply glowing effect to the h1 text */
+.banner h1 {
+  animation: fadeSlide 8.5s ease-in-out;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 4.5rem; /* Adjust size for mobile */
+    animation: fadeSlide 2s ease-in-out;
+  }
+}
+
+
+
+
+
+
+
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .buttom-flex-align {
